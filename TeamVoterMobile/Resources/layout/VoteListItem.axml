@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+    <ImageView
+        android:id="@+id/list_item_vote_downVoteImage"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/title_image_size"
+        android:layout_height="@dimen/title_image_size"
+        android:src="@drawable/downvoteimage"
+        android:layout_marginEnd="8dp" />
+    <ImageView
+        android:id="@+id/list_item_vote_upVoteImage"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/title_image_size"
+        android:layout_height="@dimen/title_image_size"
+        android:src="@drawable/upvoteimage"
+        android:layout_marginEnd="8dp" />
+    <TextView
+        android:id="@+id/list_item_vote_userEmail"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="swapnick@genetec.com"
+        android:paddingEnd="30dp"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/list_item_vote_voteTimestamp"
+        android:layout_alignStart="@id/list_item_vote_userEmail"
+        android:layout_alignEnd="@id/list_item_vote_userEmail"
+        android:layout_below="@id/list_item_vote_userEmail"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="2016-10-10 9:00 pm" />
+</RelativeLayout>

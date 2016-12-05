@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/activity_details_voteStatusPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/activity_details_teamNameText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/activity_details_upVotesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorUpVote"
+            android:textSize="@dimen/title_font_size"
+            android:layout_marginEnd="4dp" />
+        <ImageView
+            android:id="@+id/activity_details_upVotesImage"
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="@dimen/title_image_size"
+            android:src="@drawable/upvoteimage"
+            android:layout_marginEnd="4dp" />
+        <TextView
+            android:id="@+id/activity_details_downVotesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDownVote"
+            android:textSize="@dimen/title_font_size"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+        <ImageView
+            android:id="@+id/activity_details_downVotesImage"
+            android:layout_width="@dimen/title_image_size"
+            android:layout_height="@dimen/title_image_size"
+            android:src="@drawable/downvoteimage"
+            android:layout_marginEnd="4dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/activity_details_upVoteButton"
+        android:layout_below="@id/activity_details_voteStatusPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Up Vote"
+        android:background="@color/colorUpVote"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/activity_details_downVoteButton"
+        android:layout_below="@id/activity_details_upVoteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Down Vote"
+        android:background="@color/colorDownVote"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/activity_details_votingHistoryLabel"
+        android:layout_below="@id/activity_details_downVoteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voting History"
+        android:textColor="@android:color/black"
+        android:background="#DDDDDD"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_details_votingHistoryLabel">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_details_votingHistoryList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+        <ProgressBar
+            android:id="@+id/activity_details_loadingIndicator"
+            android:visibility="gone"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</RelativeLayout>

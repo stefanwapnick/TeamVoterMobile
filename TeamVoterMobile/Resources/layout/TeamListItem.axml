@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true">
+    <ImageView
+        android:id="@+id/list_item_team_downVotesImage"
+        android:layout_centerVertical="true"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/downvoteimage"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:id="@+id/list_item_team_downVotesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorDownVote"
+        android:text="10"
+        android:textSize="24sp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@id/list_item_team_downVotesImage" />
+    <ImageView
+        android:id="@+id/list_item_team_upVotesImage"
+        android:layout_centerVertical="true"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/upvoteimage"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/list_item_team_downVotesText" />
+    <TextView
+        android:id="@+id/list_item_team_upVotesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorUpVote"
+        android:text="10"
+        android:textSize="24sp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@id/list_item_team_upVotesImage"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/list_item_team_nameText"
+        android:layout_toStartOf="@id/list_item_team_upVotesText"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:text="Griffins"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/list_item_team_updatedTimestampText"
+        android:layout_alignStart="@id/list_item_team_nameText"
+        android:layout_alignEnd="@id/list_item_team_nameText"
+        android:layout_below="@id/list_item_team_nameText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Last vote: 2016-10-10 9:00 pm" />
+</RelativeLayout>
